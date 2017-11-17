@@ -1,0 +1,19 @@
+<div id="search-component">
+  <!--<input #searchBox id="search-box" (keyup)="search(searchBox.value)"/>-->
+  <!--<div>-->
+    <!--<input type="text" #searchBox pInputText id="search-box" placeholder="Search hero..." (keyup)="search(searchBox.value)"><button pButton type="button" id="x-button" (click)="searchBox.value='';search('')" label="x"></button>-->
+  <!--</div>-->
+  <div class="ui-inputgroup">
+    <!--<input type="text" #searchBox pInputText id="search-box" placeholder="Search hero..." (keyup)="search(searchBox.value)">-->
+    <p-autoComplete #searchBox [(ngModel)]="text" [suggestions]="heroes$." (completeMethod)="search($event.query)"></p-autoComplete>
+
+    <button pButton type="button" icon="fa-superpowers" class="ui-button-secondary" ></button>
+  </div>
+  <!--<ul class="search-result">-->
+    <!--<li *ngFor="let hero of heroes$ | async">-->
+      <!--<a routerLink="/detail/{{hero.id}}">-->
+        <!--{{hero.name}}-->
+      <!--</a>-->
+    <!--</li>-->
+  <!--</ul>-->
+</div>

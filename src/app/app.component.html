@@ -1,0 +1,14 @@
+<h1>{{title}}</h1>
+<!--<nav>-->
+  <!--<a routerLink="/dashboard">Dashboard</a>-->
+  <!--<a routerLink="/heroes">Heroes</a>-->
+  <!--<a routerLink="/heroes-data">Heroes data</a>-->
+<!--</nav>-->
+
+<div class="ui-inputgroup">
+  <button pButton type="button" label="Dashboard" routerLink="/dashboard" class="lft">
+  </button><button pButton type="button" label="Heroes" routerLink="/heroes" class="mdl">
+  </button><button pButton type="button" label="Heroes data" routerLink="/heroes-data" class="rt"></button>
+</div>
+<router-outlet></router-outlet>
+<app-messages></app-messages>

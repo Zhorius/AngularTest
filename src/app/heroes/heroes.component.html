@@ -1,0 +1,18 @@
+<h2>My Heroes</h2>
+
+<ul class = "heroes">
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class = "badge">{{hero.id}}</span>
+      {{hero.name}}
+    </a>
+    <button class = "delete" title = "delete hero" (click)="delete(hero)">x</button>
+  </li>
+</ul>
+
+<div class="ui-inputgroup">
+  <span class="ui-inputgroup-addon">Hero name:</span>
+  <input #heroName pInputText type="text"/>
+  <button pButton (click)="add(heroName.value); heroName.value=''" label="add" icon="fa-plus">
+  </button>
+</div>
